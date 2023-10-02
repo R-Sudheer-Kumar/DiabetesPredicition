@@ -43,8 +43,8 @@ st.markdown("<h1 style='text-align : center '>Diabetes Prediction</h1>",unsafe_a
 
 gender = st.selectbox("Gender",label_visibility="collapsed",options=['Male','Female','Other'],index=None , placeholder="Gender")
 age = st.number_input("Age",label_visibility="collapsed",placeholder="Age" , value=None)   
-hypertension = st.radio("High Tension",["Yes","No"])
-heartattack = st.radio("Heart Attack symptoms",options = ["Yes","No"])
+hypertension = st.radio(" ‎High Tension",["Yes","No"])
+heartattack = st.radio(" ‎ Heart Attack symptoms",options = ["Yes","No"])
 smoking = st.selectbox("smoking",label_visibility="collapsed",options=["never","current","former","ever" ,"not current"],index=None , placeholder="Smoking ")
 weight = st.number_input("weight",label_visibility="collapsed",value = None ,placeholder="Weight(in kg)")
 height = st.number_input("height" , label_visibility="collapsed",value=None , placeholder="Height(in feet)")
