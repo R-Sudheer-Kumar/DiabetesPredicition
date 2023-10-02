@@ -18,6 +18,24 @@ input[class]
     font-weight:bold;
 }
                 
+div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
+    font-size: 23px;
+    margin-left:-30%;
+}
+            
+.st-emotion-cache-1vbkxwb p {
+    padding: 0px 5px 2px 5px;
+    transform:scale(1.4);
+            
+    
+} 
+.st-emotion-cache-keje6w {
+    width: calc(30% - 1rem);
+    flex: 1 2 calc(40% - 1rem);
+    /* padding-left: 50px; */
+    margin-left: 41%;
+}
+            
 div.stButton > button:first-child {
     background-color: #0099ff;
     color:#ffffff;
@@ -28,9 +46,14 @@ div.stButton > button:hover {
 }
 div.stButton > button:focus:not(:active) {
     color:#ffffff;
-    background-color:#0099ff;   
+    background-color:#0099ff;  
 }
-
+div.stButton > button
+{
+    transform:scale(1.1);
+    padding:7px 10px;
+    margin:5px 0px 7px 11px;
+}
 </style>""", unsafe_allow_html=True)
 
 
@@ -43,8 +66,12 @@ st.markdown("<h1 style='text-align : center '>Diabetes Prediction</h1>",unsafe_a
 
 gender = st.selectbox("Gender",label_visibility="collapsed",options=['Male','Female','Other'],index=None , placeholder="Gender")
 age = st.number_input("Age",label_visibility="collapsed",placeholder="Age" , value=None)   
-hypertension = st.radio("  ‎ ‎High Tension",["Yes","No"])
-heartattack = st.radio(" ‎  ‎‎ ‎‎‎‎‎Heart Attack symptoms",options = ["Yes","No"])
+c1,c2,c3,c4,c5 = st.columns(5)
+with c3:
+    hypertension = st.radio("High Tension",["Yes","No"])
+ch1,ch2= st.columns(2)
+with ch1:
+    heartattack = st.radio("Heart Attack symptoms",options = ["Yes","No"])
 smoking = st.selectbox("smoking",label_visibility="collapsed",options=["never","current","former","ever" ,"not current"],index=None , placeholder="Smoking ")
 weight = st.number_input("weight",label_visibility="collapsed",value = None ,placeholder="Weight(in kg)")
 height = st.number_input("height" , label_visibility="collapsed",value=None , placeholder="Height(in feet)")
@@ -63,8 +90,8 @@ himoglobina1c = st.number_input("HbA1c_level" , label_visibility="collapsed" ,va
 bloodglucose = st.number_input("Blood Glucose Level" , label_visibility="collapsed" , value=None , placeholder="Blood Glucose Level")
 
 
-col1, col2, col3,c4,c5,c6,c7 = st.columns(7)
-with c4:
+col1, col2, col3,c4,c5 = st.columns(5)
+with col3:
     diabetespredicition = st.button("Predict" )
 
 def giveResult(res):
