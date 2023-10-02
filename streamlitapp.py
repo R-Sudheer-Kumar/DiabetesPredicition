@@ -52,7 +52,7 @@ div.stButton > button
 {
     transform:scale(1.1);
     padding:7px 10px;
-    margin:5px 0px 7px 11px;
+    margin:5px 0px 7px 14px;
 }
 </style>""", unsafe_allow_html=True)
 
@@ -62,7 +62,7 @@ gender_map = {'Male':0 , 'Female':1 , 'Other':2}
 smoking_map = {'never': 0,'current': 1, 'former': 2, 'ever': 3, 'not current': 4} 
 Bintoint_map = {'Yes':1 , 'No':0}
 
-st.markdown("<h1 style='text-align : center '>Diabetes Prediction</h1>",unsafe_allow_html=True)
+st.markdown("<h1 style='text-align : center;margin-bottom:5px;margin-left:-15px; '>Diabetes Prediction</h1>",unsafe_allow_html=True)
 
 gender = st.selectbox("Gender",label_visibility="collapsed",options=['Male','Female','Other'],index=None , placeholder="Gender")
 age = st.number_input("Age",label_visibility="collapsed",placeholder="Age" , value=None)   
