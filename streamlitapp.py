@@ -66,8 +66,8 @@ st.markdown("<h1 style='text-align : center;margin-bottom:5px;margin-left:-15px;
 
 gender = st.selectbox("Gender",label_visibility="collapsed",options=['Male','Female','Other'],index=None , placeholder="Gender")
 age = st.number_input("Age",label_visibility="collapsed",placeholder="Age" , value=None)   
-c1,c2,c3,c4,c5 = st.columns(5)
-with c3:
+c1,c2= st.columns(2)
+with c1:
     hypertension = st.radio("High Tension",["Yes","No"])
 ch1,ch2= st.columns(2)
 with ch1:
