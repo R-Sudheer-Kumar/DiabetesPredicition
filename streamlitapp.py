@@ -90,8 +90,8 @@ himoglobina1c = st.number_input("HbA1c_level" , label_visibility="collapsed" ,va
 bloodglucose = st.number_input("Blood Glucose Level" , label_visibility="collapsed" , value=None , placeholder="Blood Glucose Level")
 
 
-col1, col2, col3,c4,c5 = st.columns(5)
-with col3:
+col1, col2 = st.columns(2)
+with col1:
     diabetespredicition = st.button("Predict" )
 
 def giveResult(res):
