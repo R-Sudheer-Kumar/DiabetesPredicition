@@ -2,7 +2,7 @@ import streamlit as st
 import pickle as pk
 import numpy as np         
     
-model = pk.load(open("diabetesPrediction","rb"))
+model = pk.load(open("diabetesPrediction.pkl","rb"))
 sc = pk.load(open("scaler.pkl","rb"))
 
 # adding style to the website 
@@ -37,14 +37,14 @@ div.stButton > button:focus:not(:active) {
 feet_meter = 30.48
 gender_map = {'Male':0 , 'Female':1 , 'Other':2}
 smoking_map = {'never': 0,'current': 1, 'former': 2, 'ever': 3, 'not current': 4} 
-Bintoint_map = {'True':1 , 'False':0}
+Bintoint_map = {'Yes':1 , 'No':0}
 
 st.markdown("<h1 style='text-align : center '>Diabetes Prediction</h1>",unsafe_allow_html=True)
 
 gender = st.selectbox("Gender",label_visibility="collapsed",options=['Male','Female','Other'],index=None , placeholder="Gender")
 age = st.number_input("Age",label_visibility="collapsed",placeholder="Age" , value=None)   
-hypertension = st.radio("High Tension",["True","False"])
-heartattack = st.radio("Heart Attack symptoms",options = ["True","False"])
+hypertension = st.radio("High Tension",["Yes","No"])
+heartattack = st.radio("Heart Attack symptoms",options = ["Yes","No"])
 smoking = st.selectbox("smoking",label_visibility="collapsed",options=["never","current","former","ever" ,"not current"],index=None , placeholder="Smoking ")
 weight = st.number_input("weight",label_visibility="collapsed",value = None ,placeholder="Weight(in kg)")
 height = st.number_input("height" , label_visibility="collapsed",value=None , placeholder="Height(in feet)")
