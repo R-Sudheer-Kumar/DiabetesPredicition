@@ -4,6 +4,18 @@
 
 This project aims to predict the likelihood of a person having diabetes using a Random Forest machine learning model. The Random Forest algorithm is used to analyze a dataset containing various health-related features to make predictions about diabetes status.
 
+## Technologies used      
+
+1. Python
+
+2. Numpy
+
+3. Pandas
+
+4. scikit-learn
+
+5. Streamlit
+
 ## Table of Contents
 
 - [Dataset](#dataset)
@@ -11,7 +23,6 @@ This project aims to predict the likelihood of a person having diabetes using a 
 - [Usage](#usage)
 - [Methodology](#methodology)
 - [Results](#results)
-- [abc](#abc)
 
 ## Dataset
 
@@ -78,7 +89,4 @@ These results indicate that the model performs well in predicting diabetes statu
 ## Contact
 
 If you have any questions or suggestions, please feel free to contact us at rsudheerkumar40@gmail.com 
-
-# abc
-adfsadfasf
 
